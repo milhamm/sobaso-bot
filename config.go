@@ -1,4 +1,4 @@
-package config
+package main
 
 import "os"
 
@@ -11,12 +11,12 @@ type Config struct{
 	Line LineBotConfig
 }
 
-func New() *Config{
+func NewConfig() *Config{
 	return &Config{
-		Line : LineBotConfig{
+		Line :LineBotConfig{
 			CHANNEL_SECRET: getEnv("CHANNEL_SECRET"),
 			CHANNEL_TOKEN: getEnv("CHANNEL_TOKEN"),
-		}
+		},
 	}
 }
 

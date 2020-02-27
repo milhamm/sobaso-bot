@@ -6,7 +6,6 @@ import (
 	// "os"
 	// "github.com/line/line-bot-sdk-go/linebot"
 	"github.com/joho/godotenv"
-	"github.com/milhamm/sobaso-bot/config"
 )
 
 func init() {
@@ -16,7 +15,7 @@ func init() {
 }
 
 func main(){
-	conf := config.New()
+	conf := NewConfig()
 
 	fmt.Println(conf.Line.CHANNEL_SECRET)
 	fmt.Println(conf.Line.CHANNEL_TOKEN)
